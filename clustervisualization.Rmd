@@ -1,0 +1,115 @@
+---
+title: "Star Cluster Simulation"
+output: html_document
+---
+
+```{r echo=F}
+setwd("F:\\pes documents\\cs-5th sem\\data analytics\\Project")
+```
+```{r}
+library(plotly)
+library(zoom)
+library(dplyr)
+```
+```{r}
+position1<-read.csv('c_0000.csv')
+position2 <- read.csv("c_0100.csv")
+position3 <- read.csv("c_0200.csv")
+position4 <- read.csv("c_0300.csv")
+position5 <- read.csv("c_0400.csv")
+position6 <- read.csv("c_0500.csv")
+position7 <- read.csv("c_0600.csv")
+position8 <- read.csv("c_0700.csv")
+position9 <- read.csv("c_0800.csv")
+position10 <- read.csv("c_0900.csv")
+position11 <- read.csv("c_1000.csv")
+position12 <- read.csv("c_1100.csv")
+position13 <- read.csv("c_1200.csv")
+position14 <- read.csv("c_1300.csv")
+position15 <- read.csv("c_1400.csv")
+position16 <- read.csv("c_1500.csv")
+position17 <- read.csv("c_1600.csv")
+position18 <- read.csv("c_1700.csv")
+position19 <- read.csv("c_1800.csv")
+all_positions<-rbind(position1,position2,position3,position4,position5,position6,position7,position8,position9,position10,position11,position12, position13,position14,position15,position16,position17,position18,position19)
+
+```
+```{r}
+PlotGraph<-function(position,title){
+  xax<-list(nticks=6,range=c(-30,30))
+  yax<-list(nticks=6,range=c(-30,30))
+  zax<-list(nticks=15,range=c(-50,50))
+  mx<-sum(position$x)+1
+  my=sum(position$y)+1
+  mz<-sum(position$z)+1
+  scene = list(pch='.',xaxis=xax,yaxis=yax,zaxis=zax,camera = list(eye = list( x=-1.75,y=2,z=0)) )
+  plot_ly(position,x=~x,y=~y,z=~z, type='scatter3d',color = (~(x+y+z)/3),showlegend=F ,size=I(3),mode='markers') %>%
+    layout(scene=scene,title=title)
+  
+}
+```
+```{r}
+p1<-PlotGraph(position1,'Position at time 1')
+p2<-PlotGraph(position2,'Postion at time 2')
+p3<-PlotGraph(position3,'Postion at time 3')
+p4<-PlotGraph(position4,'Postion at time  4')
+p5<-PlotGraph(position5,'Postion at time  5')
+p6<-PlotGraph(position6,'Postion at time  6')
+p7<-PlotGraph(position7,'Postion at time  7')
+p8<-PlotGraph(position8,'Postion at time  8')
+p9<-PlotGraph(position9,'Postion at time  9')
+p10<-PlotGraph(position10,'Postion at time  10')
+p11<-PlotGraph(position11,'Postion at time  11')
+p12<-PlotGraph(position12,'Postion at time  12')
+p13<-PlotGraph(position13,'Postion at time  13')
+p14<-PlotGraph(position14,'Postion at time  14')
+p15<-PlotGraph(position15,'Postion at time  15')
+p16<-PlotGraph(position16,'Postion at time  16')
+p17<-PlotGraph(position17,'Postion at time  17')
+p18<-PlotGraph(position18,'Postion at time  18')
+p19<-PlotGraph(position19,'Postion at time  19')
+```
+```{r}
+htmltools::tagList(list(p1,p2))
+```
+```{r}
+htmltools::tagList(list(p3,p4))
+htmlwidgets::saveWidget(p1,'P1.html')display_html('')
+
+```
+```{r}
+htmltools::tagList(list(p5,p6))
+
+```
+```{r}
+htmltools::tagList(list(p7,p8))
+
+```
+```{r}
+htmltools::tagList(list(p9,p10))
+
+```
+```{r}
+htmltools::tagList(list(p11,p12))
+
+```
+```{r}
+htmltools::tagList(list(p13,p14))
+
+```
+```{r}
+htmltools::tagList(list(p15,p16))
+
+```
+```{r}
+htmltools::tagList(list(p17,p18))
+
+```
+```{r}
+htmltools::tagList(list(p3,p4))
+
+```
+```{r}
+htmltools::tagList(list(p19))
+
+```
