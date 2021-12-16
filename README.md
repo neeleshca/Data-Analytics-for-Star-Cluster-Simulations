@@ -9,8 +9,6 @@ This visualization is done in plotly and can be rotated to see the visualization
 <br/><br/>
 To generalize the position of a star, The distance and velocity vectors were created and the magnitude of velocity and distance was used for analysis in time series.
 
-The commits tell what the notebook really is and there is analysis in each file for better understanding of the model.<br/>
-
 <br/><br/><br/><br/><br/><br/>
 NOTE: Some of the code was done on Windows platform and some of them were done in Linux platform. So there could be difference in the import statements of the path. If you are running on Windows platform, change the '/' in the path to '\\' and if you are running it on ubuntu, then change the '\\' to '/'.<br/>
 
