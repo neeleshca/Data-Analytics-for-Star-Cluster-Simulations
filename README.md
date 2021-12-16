@@ -7,7 +7,9 @@ Start with the exploratory data analytics that is done in R(EDA.r) which shows a
 To see how different the clusters are with the different timestamp, run the clustervisualization.rmd file. Its a r markdown file that visualizes how the cluster moves.<br/>
 This visualization is done in plotly and can be rotated to see the visualization in different angles.
 <br/><br/>
-To generalize the position of a star, The distance and velocity vectors were created and the magnitude of velocity and distance was used for analysis in time series.
+To generalize the position of a star, The distance and velocity vectors were created and the magnitude of velocity and distance was used for analysis in time series.<br>
+
+The python notebooks have some more analysis.
 
 <br/><br/><br/><br/><br/><br/>
 NOTE: Some of the code was done on Windows platform and some of them were done in Linux platform. So there could be difference in the import statements of the path. If you are running on Windows platform, change the '/' in the path to '\\' and if you are running it on ubuntu, then change the '\\' to '/'.<br/>
